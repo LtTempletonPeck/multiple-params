@@ -41,6 +41,7 @@ internal class ParamControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
         )
             .andExpect(status().isOk)
+            .andExpect(jsonPath("$.length()", equalTo(4)))
             .andExpect(jsonPath("$[0]", equalTo("A")))
             .andExpect(jsonPath("$[1]", equalTo("B")))
             .andExpect(jsonPath("$[2]", equalTo("C")))
