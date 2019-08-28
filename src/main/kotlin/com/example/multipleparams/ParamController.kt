@@ -15,8 +15,6 @@ class ParamController {
 
 }
 
-data class ParamQuery(
-    val ids1: Set<String> = setOf()
-) {
+data class ParamQuery(val ids1: Set<String> = setOf()) {
     var ids2: Set<String> = setOf()
 }
